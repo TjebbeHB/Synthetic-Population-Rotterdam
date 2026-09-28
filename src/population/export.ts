@@ -5,10 +5,12 @@ import { FEATURES, type GenerateOptions, type Population, type SourceBundle } fr
 import translink from '../data/translinkProfiles.json';
 import methods from '../../docs/research-methods.md?raw';
 import dictionary from '../../docs/research-data-dictionary.md?raw';
+import { FLAT_COLUMNS, flatRows } from './flat';
+import flatGuide from '../../docs/rotterdam-validation.md?raw';
 
 export interface ResearchRequest {
   source: SourceBundle; options: GenerateOptions; includeActivities: boolean; includeTranslink: boolean;
-  nsStations?: unknown;
+  nsStations?: unknown; includeFlat?: boolean; generatedAt?: string;
 }
 export interface ResearchSummary { people: number; batches: number; households: number; unresolvedChildren: number; warnings: string[]; checks: Population['checks']; }
 export function batchSeed(seed: number, code: string) {
@@ -64,7 +66,7 @@ export async function exportResearch(request: ResearchRequest, sink: (chunk: Uin
       await sink(chunk);
     }
   }
-  const entry = (name: string) => { const f = new ZipDeflate(name, { level: 1 }); f.mtime = new Date('2024-01-01T00:00:00Z'); zip.add(f); return f; };
+  const entry = (name: string) => { const f = new ZipDeflate(name, { level: 1 }); f.mtime = new Date(2024, 0, 1, 0, 0, 0); zip.add(f); return f; };
   function push(file: ZipDeflate, data: Uint8Array, final: boolean) {
     if (file.size + data.length >= 0xffffffff) throw new Error('Een CSV-bestand wordt groter dan 4 GB. Exporteer een kleinere selectie of zonder activiteiten.');
     file.push(data, final);
@@ -82,6 +84,7 @@ export async function exportResearch(request: ResearchRequest, sink: (chunk: Uin
   const summary: ResearchSummary = { people: 0, batches: 0, households: 0, unresolvedChildren: 0, warnings: [], checks: [] };
   const batches = researchBatches(request), warnings = new Set<string>();
   await textFile('methods.md', methods); await textFile('data-dictionary.md', dictionary);
+  if (request.includeFlat) await textFile('read-me-first.md', flatGuide);
   await textFile('source-inputs.json', JSON.stringify(request.source));
   const batchSeeds: Record<string, number> = {};
   for (const batch of batches) {
@@ -89,6 +92,7 @@ export async function exportResearch(request: ResearchRequest, sink: (chunk: Uin
     const p = generatePopulation(batch.source, batch.options), prefix = batch.prefix;
     batchSeeds[prefix] = batch.options.seed;
     await csv(`${prefix}/people.csv`, PERSON_COLUMNS, personRows(p, prefix));
+    if (request.includeFlat) await csv(`${prefix}/people-flat.csv`, [...PERSON_COLUMNS, ...FLAT_COLUMNS], flatRows(p, prefix, personRows(p, prefix), request.includeActivities));
     await csv(`${prefix}/clusters.csv`, ['cluster_id','kind','area','label','days_monday0','member_count'], p.clusters.map(c => [`${prefix}:C${c.id}`,c.kind,c.area,c.label,c.days.join('|'),c.members.length]));
     function* memberships() { for (const c of p.clusters) for (const id of c.members) yield [`${prefix}:C${c.id}`,`${prefix}:P${id}`]; }
     await csv(`${prefix}/memberships.csv`, ['cluster_id','person_id'], memberships());
@@ -106,7 +110,7 @@ export async function exportResearch(request: ResearchRequest, sink: (chunk: Uin
   if (request.nsStations) await textFile('external/ns-stations.json', JSON.stringify(request.nsStations, null, 2));
   if (request.source.scope === 'national') warnings.add('Gemeenten zijn onafhankelijk gegenereerd. Geen gemeentegrensoverschrijdende families, woon-werkstromen of contactnetwerken; werk- en schoolgroepen zijn lokale modelaannames.');
   summary.warnings = [...warnings];
-  await textFile('manifest.json', JSON.stringify({ modelVersion:LIFE_VERSION, methodsVersion:'2.1', generatedAt:new Date().toISOString(), options:request.options,
+  await textFile('manifest.json', JSON.stringify({ modelVersion:LIFE_VERSION, methodsVersion:'2.1', exportSchema:'research-2.2', includeFlat:!!request.includeFlat, generatedAt:request.generatedAt ?? new Date().toISOString(), options:request.options,
     scope:request.source.scope ?? 'rotterdam', sourceYear:request.source.year, batchSeeds, includeActivities:request.includeActivities,
     translink:request.includeTranslink ? 'aggregate_reference_only_not_used_to_assign_trips' : 'not_included', ns:request.nsStations ? 'station_context_only_not_passenger_flows' : 'not_connected',
     sample:request.options.count < request.source.areas.filter(a=>request.options.areas.includes(a.id)).reduce((n,a)=>n+a.population,0),

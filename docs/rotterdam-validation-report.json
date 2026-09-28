@@ -1,0 +1,114 @@
+{
+  "archive": "rotterdam-2024-validation.zip",
+  "sha256": "2777de2cfbb73d90abaaeb98a3b1894cfab5b8a7698a4a40cfb2baab00f792e8",
+  "bytes": 360129204,
+  "source_year": 2024,
+  "seed": 20260925,
+  "people": 670575,
+  "flat_rows": 670575,
+  "clusters": 376743,
+  "memberships": 1359064,
+  "activity_rows": 13987829,
+  "included_neighbourhoods": 85,
+  "included_population": 670575,
+  "excluded_areas": [
+    {
+      "id": "BU05992306",
+      "name": "Botlek",
+      "population": 5
+    },
+    {
+      "id": "BU05992307",
+      "name": "Europoort",
+      "population": 5
+    }
+  ],
+  "excluded_population": 10,
+  "max_flat_cell_characters": 1820,
+  "checks": {
+    "unique_person_and_cluster_ids": true,
+    "all_foreign_keys_valid": true,
+    "flat_equals_linked_for_all_rows": true,
+    "all_diaries_match_and_cover_24h": true,
+    "parent_age_gaps_valid": true,
+    "all_entries_pass_crc_and_sha256": true
+  },
+  "quality_totals": {
+    "householdTarget": 341445,
+    "householdActual": 343610,
+    "singleTarget": 169120,
+    "singleActual": 169155,
+    "workerTarget": 344220,
+    "workerActual": 344218,
+    "unresolvedChildren": 1
+  },
+  "warnings": [
+    "Schoolinschrijvingen overschrijden soms het aantal geschikte personen; toewijzing is begrensd en kan afwijken van CBS (andere peildatum / dubbele inschrijvingen).",
+    "Ontbrekend opleidingsniveau blijft onbekend. Herkomstcategorieën worden niet omgerekend.",
+    "Ontbrekend huishoudinkomen blijft onbekend.",
+    "CBS-werkenden overschrijden de geschikte leeftijdspopulatie; werktoewijzing is begrensd.",
+    "Minderjarigen zonder haalbare oudercombinatie zijn als onopgelost gemarkeerd; hun huishoudcontacten zijn uitgeschakeld.",
+    "Leeftijden binnen vijfjaarsgroepen, familieparen, roosters, werkplekken en contacten zijn synthetische aannames. De fit op invoermarges is geen onafhankelijke validatie.",
+    "Instellingsbewoners volgen Rotterdamse leeftijdsprioren; contactgroepen van 20 en hun lokale verdeling zijn aannames, geen waargenomen instellingen.",
+    "Scholen krijgen één toegewezen medewerker per klas; instellingen één per vijf bewoners. Deze werkende inwoners verbinden clusters via hun eigen huishouden; aantallen, functies en aanwezigheid zijn aannames.",
+    "Verbanden van inkomen en auto’s met huishouden en werk zijn expliciete modelaannames, niet uit CBS-kruistabellen geschat."
+  ],
+  "entries": {
+    "methods.md": {
+      "bytes": 14259,
+      "sha256": "5a4d3bf70aefd7b946e4185fbb20588e2b29228abf97f7e7aa7f4f10e7da1a8a"
+    },
+    "data-dictionary.md": {
+      "bytes": 5472,
+      "sha256": "b1f0e901c1c5c73891d6f0d0bc98511639ad3206de8f3394d556a6bcd4fd84db"
+    },
+    "read-me-first.md": {
+      "bytes": 12118,
+      "sha256": "e0f7c175c928a372269a2ebd4cc27ae2eb4964a307c1a4bdee0eddcf40eb0bc3"
+    },
+    "source-inputs.json": {
+      "bytes": 30317,
+      "sha256": "6d2c4cb6ec5665b2bd9fff49591429fa2d4abc6b65f0bb6457f35474b554a1da"
+    },
+    "ROT/people.csv": {
+      "bytes": 133124995,
+      "sha256": "ca22e73310b7d48f47ad702f481f7a18378a70346651380b0b4c7a4ce1d66297"
+    },
+    "ROT/people-flat.csv": {
+      "bytes": 2126288863,
+      "sha256": "6ccf77a699cc3231b6a2c8d6d6c828a64472e20a6ea51c00d360c15ccdeee2cd"
+    },
+    "ROT/clusters.csv": {
+      "bytes": 34008149,
+      "sha256": "7fb90eb11778a7355370aba6113bcfc52f1c1865bc647a2ed3b0dab8c689fba9"
+    },
+    "ROT/memberships.csv": {
+      "bytes": 38934260,
+      "sha256": "072ada948825462f0fd0e287bca532208e330fcfaa3afc9ef4ed6d5ea43f2195"
+    },
+    "ROT/activities.csv": {
+      "bytes": 1517893113,
+      "sha256": "ec0790cd2979db63e1a1c779b99a00efdf5d502e4e63d7fd7109be1b0fd61310"
+    },
+    "ROT/quality.json": {
+      "bytes": 55261,
+      "sha256": "1d413a7acc6e5497980b2293f8363c47abc6685fbd04e949fc08c05eecaba68a"
+    },
+    "external/translink-hourly-profiles.json": {
+      "bytes": 21548,
+      "sha256": "ec7c21b008209a4b5f9a7df18cf9f74c6c62ebe0210aa1d49bb73af1c7fc1674"
+    },
+    "manifest.json": {
+      "bytes": 60382,
+      "sha256": "6b99d4718f4ce3828bf92188c0e24aa6c0bed5fccc108c95167ce58f4326677a"
+    }
+  },
+  "interpretation": "Structural validation and reproducibility only; no independent validation of demographic or behavioural realism.",
+  "reproducibility": {
+    "two_full_runs_byte_identical": true,
+    "second_run_timezone": "Pacific/Honolulu",
+    "generator_rebuilt_from_minimal_source_byte_identical": true,
+    "generator_sha256": "f3172e019deae6ceb97fa689b6810eecaf922c62aac8ea6f6bf6ff9d26d49cdb",
+    "node_version": "v26.8.1"
+  }
+}

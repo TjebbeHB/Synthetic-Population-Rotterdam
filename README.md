@@ -61,3 +61,9 @@ Import `output/ns-stations.json` in the generator. Keep the key outside the fron
 This is a research prototype, not an official GGD dashboard or a validated reconstruction of real individuals. GGD styling and the existing logo are retained; branding does not imply endorsement. Household positions are fictional. Rotterdam geometry is a clearly labelled **2024 reference**, including when population statistics use another year. Sewage catchment assignments are approximate and use the included historical geometry. Synthetic relationships and activity schedules include explicit assumptions, documented in the methods and quality reports.
 
 Source metadata is bundled with the CBS, geographic and mobility snapshots. The original Apache-2.0 code license and data/documentation attribution notice are retained in [LICENSE](LICENSE) and [LICENSE-DATA](LICENSE-DATA). Upstream data and trademarks retain their respective terms.
+
+## Rotterdam validation handover
+
+Build a dependency-free Node generator with `npm run build:validation`. Run it with `node --max-old-space-size=8192 output/rotterdam-validation-code/generator.mjs --out output/rotterdam-validation.zip`. It uses frozen CBS 2024 inputs and seed 20260925, all features, full usable Rotterdam coverage, linked CSVs and one-row-per-citizen flat CSV with weekly activities. See [the readable handover guide](docs/rotterdam-validation.md) for field meanings and reproducibility. For a small smoke test add `--count 5000`.
+
+The independent standard-library audit can be run as `python3 scripts/validation/audit.py output/rotterdam-validation.zip output/validation-report.json`. It checks every flat row against the linked CSVs, IDs, group rosters, parent ages and complete daily agendas. Generated archives remain outside Git.
