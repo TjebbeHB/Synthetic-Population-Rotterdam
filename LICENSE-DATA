@@ -1,0 +1,37 @@
+# Data, documentation, and challenge text license
+
+The data files under [`data/`](data/), the documentation under [`docs/`](docs/),
+the challenge brief in [`CHALLENGE.md`](CHALLENGE.md), and the source materials
+in [`resources/`](resources/) are released under the
+[Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+
+## You are free to:
+
+- **Share**: copy and redistribute the material in any medium or format.
+- **Adapt**: remix, transform, and build upon the material for any purpose,
+  even commercially.
+
+The licensor cannot revoke these freedoms as long as you follow the license
+terms.
+
+## Under the following terms:
+
+- **Attribution**: You must give appropriate credit to *GovTech NL, CBS,
+  ODISSEI, Erasmus MC, Digicampus and contributors*, provide a link to this
+  license, and indicate if changes were made. You may do so in any reasonable
+  manner, but not in any way that suggests the licensor endorses you or your
+  use.
+
+## Notice
+
+This repository contains **no personal data of real citizens**. All
+generated populations are synthetic and intended for educational, research,
+and prototyping purposes only.
+
+Upstream open data referenced from this repository (CBS StatLine,
+Emissieregistratie RWZI-register, RIVM/NRS open GIS, BAG) is published by
+its respective custodians under their own open-data terms. When you ship a
+derived dataset, also credit those upstream sources.
+
+For the full legal text of the license, see
+<https://creativecommons.org/licenses/by/4.0/legalcode>.

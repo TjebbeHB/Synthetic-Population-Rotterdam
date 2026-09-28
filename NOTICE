@@ -1,0 +1,4 @@
+Extracted on 2026-09-28 from TjebbeHB/Synthetic-Pandemic-Sim, commit 155beb36ba55077270912516389b8e6e826201de, PDPC-project/onegov2-synthetic-data.
+Original attribution: GovTech NL / ICTU and contributors; GovTech NL, CBS, ODISSEI, Erasmus MC, Digicampus and contributors for applicable data/documentation.
+Extraction changes: two-view application shell, removal of archived dashboards and epidemic simulation engine, reduced shared styles and build configuration, on-demand-only downloads, standalone README and tests.
+GGD Rotterdam-Rijnmond branding remains the property of its owner and does not imply endorsement. Upstream snapshot provenance remains in the data and methods.

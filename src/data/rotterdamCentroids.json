@@ -1,0 +1,507 @@
+{
+  "metadata": {
+    "source": "PDOK/CBS Wijk- en Buurtkaart 2024 OGC API (buurt centroids)",
+    "extractedFrom": "Synthetic-Pandemic-Sim cityProfiles.json at 155beb36ba55077270912516389b8e6e826201de",
+    "use": "Rotterdam buurt names and centroid fallbacks only; no synthetic gravity flows or other cities"
+  },
+  "buurten": [
+    {
+      "id": "BU05990110",
+      "name": "Stadsdriehoek",
+      "lat": 51.918758,
+      "lon": 4.487154
+    },
+    {
+      "id": "BU05990111",
+      "name": "Oude Westen",
+      "lat": 51.91782,
+      "lon": 4.467083
+    },
+    {
+      "id": "BU05990112",
+      "name": "Cool",
+      "lat": 51.91837,
+      "lon": 4.476077
+    },
+    {
+      "id": "BU05990113",
+      "name": "Cs Kwartier",
+      "lat": 51.924144,
+      "lon": 4.467389
+    },
+    {
+      "id": "BU05990118",
+      "name": "Nieuwe Werk",
+      "lat": 51.906446,
+      "lon": 4.473562
+    },
+    {
+      "id": "BU05990119",
+      "name": "Dijkzigt",
+      "lat": 51.911638,
+      "lon": 4.468461
+    },
+    {
+      "id": "BU05990320",
+      "name": "Delfshaven",
+      "lat": 51.9065,
+      "lon": 4.454573
+    },
+    {
+      "id": "BU05990321",
+      "name": "Bospolder",
+      "lat": 51.908529,
+      "lon": 4.441455
+    },
+    {
+      "id": "BU05990322",
+      "name": "Tussendijken",
+      "lat": 51.912712,
+      "lon": 4.442634
+    },
+    {
+      "id": "BU05990323",
+      "name": "Spangen",
+      "lat": 51.917148,
+      "lon": 4.436191
+    },
+    {
+      "id": "BU05990324",
+      "name": "Nieuwe Westen",
+      "lat": 51.916767,
+      "lon": 4.450046
+    },
+    {
+      "id": "BU05990325",
+      "name": "Middelland",
+      "lat": 51.916989,
+      "lon": 4.459543
+    },
+    {
+      "id": "BU05990327",
+      "name": "Oud Mathenesse",
+      "lat": 51.917291,
+      "lon": 4.42415
+    },
+    {
+      "id": "BU05990328",
+      "name": "Witte Dorp",
+      "lat": 51.914726,
+      "lon": 4.42645
+    },
+    {
+      "id": "BU05990329",
+      "name": "Schiemond",
+      "lat": 51.90231,
+      "lon": 4.452936
+    },
+    {
+      "id": "BU05990451",
+      "name": "Kleinpolder",
+      "lat": 51.933212,
+      "lon": 4.433699
+    },
+    {
+      "id": "BU05990452",
+      "name": "Noord Kethel",
+      "lat": 51.954317,
+      "lon": 4.393784
+    },
+    {
+      "id": "BU05990454",
+      "name": "Schieveen",
+      "lat": 51.962345,
+      "lon": 4.419887
+    },
+    {
+      "id": "BU05990455",
+      "name": "Zestienhoven",
+      "lat": 51.950536,
+      "lon": 4.445831
+    },
+    {
+      "id": "BU05990456",
+      "name": "Overschie",
+      "lat": 51.942497,
+      "lon": 4.423872
+    },
+    {
+      "id": "BU05990457",
+      "name": "Landzicht",
+      "lat": 51.945207,
+      "lon": 4.429145
+    },
+    {
+      "id": "BU05990515",
+      "name": "Agniesebuurt",
+      "lat": 51.929468,
+      "lon": 4.476201
+    },
+    {
+      "id": "BU05990516",
+      "name": "Provenierswijk",
+      "lat": 51.92737,
+      "lon": 4.468864
+    },
+    {
+      "id": "BU05990531",
+      "name": "Bergpolder",
+      "lat": 51.935585,
+      "lon": 4.465241
+    },
+    {
+      "id": "BU05990532",
+      "name": "Blijdorp",
+      "lat": 51.930442,
+      "lon": 4.456219
+    },
+    {
+      "id": "BU05990534",
+      "name": "Liskwartier",
+      "lat": 51.937832,
+      "lon": 4.473235
+    },
+    {
+      "id": "BU05990535",
+      "name": "Oude Noorden",
+      "lat": 51.934716,
+      "lon": 4.482225
+    },
+    {
+      "id": "BU05990558",
+      "name": "Blijdorpsepolder",
+      "lat": 51.92737,
+      "lon": 4.442091
+    },
+    {
+      "id": "BU05990660",
+      "name": "Schiebroek",
+      "lat": 51.963594,
+      "lon": 4.471319
+    },
+    {
+      "id": "BU05990661",
+      "name": "Hillegersberg Zuid",
+      "lat": 51.944347,
+      "lon": 4.472921
+    },
+    {
+      "id": "BU05990662",
+      "name": "Hillegersberg Noord",
+      "lat": 51.95549,
+      "lon": 4.489773
+    },
+    {
+      "id": "BU05990664",
+      "name": "Terbregge",
+      "lat": 51.951594,
+      "lon": 4.514438
+    },
+    {
+      "id": "BU05990665",
+      "name": "Molenlaankwartier",
+      "lat": 51.960156,
+      "lon": 4.505748
+    },
+    {
+      "id": "BU05990814",
+      "name": "Rubroek",
+      "lat": 51.927147,
+      "lon": 4.491446
+    },
+    {
+      "id": "BU05990836",
+      "name": "Nieuw Crooswijk",
+      "lat": 51.940751,
+      "lon": 4.497277
+    },
+    {
+      "id": "BU05990837",
+      "name": "Oud Crooswijk",
+      "lat": 51.932505,
+      "lon": 4.494877
+    },
+    {
+      "id": "BU05990841",
+      "name": "Kralingen West",
+      "lat": 51.927186,
+      "lon": 4.504803
+    },
+    {
+      "id": "BU05990842",
+      "name": "Kralingen Oost",
+      "lat": 51.9219,
+      "lon": 4.523714
+    },
+    {
+      "id": "BU05990843",
+      "name": "Kralingse Bos",
+      "lat": 51.936931,
+      "lon": 4.5206
+    },
+    {
+      "id": "BU05990845",
+      "name": "De Esch",
+      "lat": 51.908066,
+      "lon": 4.526857
+    },
+    {
+      "id": "BU05990847",
+      "name": "Struisenburg",
+      "lat": 51.919144,
+      "lon": 4.507747
+    },
+    {
+      "id": "BU05991017",
+      "name": "Kop van Zuid",
+      "lat": 51.906391,
+      "lon": 4.488858
+    },
+    {
+      "id": "BU05991079",
+      "name": "Kop van Zuid - Entrepot",
+      "lat": 51.907331,
+      "lon": 4.502955
+    },
+    {
+      "id": "BU05991080",
+      "name": "Vreewijk",
+      "lat": 51.885704,
+      "lon": 4.508561
+    },
+    {
+      "id": "BU05991081",
+      "name": "Bloemhof",
+      "lat": 51.893449,
+      "lon": 4.50061
+    },
+    {
+      "id": "BU05991082",
+      "name": "Hillesluis",
+      "lat": 51.89534,
+      "lon": 4.512302
+    },
+    {
+      "id": "BU05991085",
+      "name": "Katendrecht",
+      "lat": 51.900417,
+      "lon": 4.482764
+    },
+    {
+      "id": "BU05991086",
+      "name": "Afrikaanderwijk",
+      "lat": 51.901424,
+      "lon": 4.501873
+    },
+    {
+      "id": "BU05991087",
+      "name": "Feijenoord",
+      "lat": 51.910015,
+      "lon": 4.510214
+    },
+    {
+      "id": "BU05991088",
+      "name": "Noordereiland",
+      "lat": 51.913941,
+      "lon": 4.496209
+    },
+    {
+      "id": "BU05991283",
+      "name": "Oud IJsselmonde",
+      "lat": 51.899873,
+      "lon": 4.544475
+    },
+    {
+      "id": "BU05991284",
+      "name": "Lombardijen",
+      "lat": 51.876246,
+      "lon": 4.523511
+    },
+    {
+      "id": "BU05991289",
+      "name": "Groot IJsselmonde",
+      "lat": 51.885404,
+      "lon": 4.545735
+    },
+    {
+      "id": "BU05991290",
+      "name": "Beverwaard",
+      "lat": 51.89222,
+      "lon": 4.566725
+    },
+    {
+      "id": "BU05991391",
+      "name": "Pernis",
+      "lat": 51.887638,
+      "lon": 4.388242
+    },
+    {
+      "id": "BU05991444",
+      "name": "'s-Gravenland",
+      "lat": 51.9248,
+      "lon": 4.550505
+    },
+    {
+      "id": "BU05991446",
+      "name": "Kralingseveer",
+      "lat": 51.910424,
+      "lon": 4.547324
+    },
+    {
+      "id": "BU05991448",
+      "name": "Prinsenland",
+      "lat": 51.934276,
+      "lon": 4.548289
+    },
+    {
+      "id": "BU05991449",
+      "name": "Het Lage Land",
+      "lat": 51.94535,
+      "lon": 4.542315
+    },
+    {
+      "id": "BU05991463",
+      "name": "Ommoord",
+      "lat": 51.960743,
+      "lon": 4.542561
+    },
+    {
+      "id": "BU05991466",
+      "name": "Zevenkamp",
+      "lat": 51.966254,
+      "lon": 4.570024
+    },
+    {
+      "id": "BU05991467",
+      "name": "Oosterflank",
+      "lat": 51.946155,
+      "lon": 4.560195
+    },
+    {
+      "id": "BU05991468",
+      "name": "Nesselande",
+      "lat": 51.980185,
+      "lon": 4.587253
+    },
+    {
+      "id": "BU05991570",
+      "name": "Charlois Zuidrand",
+      "lat": 51.86643,
+      "lon": 4.466217
+    },
+    {
+      "id": "BU05991571",
+      "name": "Tarwewijk",
+      "lat": 51.894405,
+      "lon": 4.484445
+    },
+    {
+      "id": "BU05991572",
+      "name": "Carnisse",
+      "lat": 51.888293,
+      "lon": 4.478753
+    },
+    {
+      "id": "BU05991573",
+      "name": "Zuidwijk",
+      "lat": 51.873288,
+      "lon": 4.488983
+    },
+    {
+      "id": "BU05991574",
+      "name": "Oud Charlois",
+      "lat": 51.891036,
+      "lon": 4.466281
+    },
+    {
+      "id": "BU05991575",
+      "name": "Wielewaal",
+      "lat": 51.879234,
+      "lon": 4.460532
+    },
+    {
+      "id": "BU05991576",
+      "name": "Zuidplein",
+      "lat": 51.887354,
+      "lon": 4.489612
+    },
+    {
+      "id": "BU05991577",
+      "name": "Pendrecht",
+      "lat": 51.873585,
+      "lon": 4.468351
+    },
+    {
+      "id": "BU05991578",
+      "name": "Zuiderpark",
+      "lat": 51.87847,
+      "lon": 4.491783
+    },
+    {
+      "id": "BU05991593",
+      "name": "Heijplaat",
+      "lat": 51.891283,
+      "lon": 4.421972
+    },
+    {
+      "id": "BU05991692",
+      "name": "Hoogvliet Noord",
+      "lat": 51.869215,
+      "lon": 4.360876
+    },
+    {
+      "id": "BU05991699",
+      "name": "Hoogvliet Zuid",
+      "lat": 51.854887,
+      "lon": 4.365447
+    },
+    {
+      "id": "BU05991853",
+      "name": "Spaanse Polder",
+      "lat": 51.928207,
+      "lon": 4.420348
+    },
+    {
+      "id": "BU05991926",
+      "name": "Nieuw Mathenesse",
+      "lat": 51.907652,
+      "lon": 4.42402
+    },
+    {
+      "id": "BU05992194",
+      "name": "Waalhaven",
+      "lat": 51.891539,
+      "lon": 4.439051
+    },
+    {
+      "id": "BU05992196",
+      "name": "Eemhaven",
+      "lat": 51.883431,
+      "lon": 4.406507
+    },
+    {
+      "id": "BU05992198",
+      "name": "Waalhaven Zuid",
+      "lat": 51.873736,
+      "lon": 4.441892
+    },
+    {
+      "id": "BU05992306",
+      "name": "Botlek",
+      "lat": 51.882718,
+      "lon": 4.277455
+    },
+    {
+      "id": "BU05992459",
+      "name": "Bedrijvenpark Noord-West",
+      "lat": 51.942832,
+      "lon": 4.405852
+    },
+    {
+      "id": "BU05992704",
+      "name": "Rozenburg",
+      "lat": 51.907445,
+      "lon": 4.24356
+    }
+  ]
+}
